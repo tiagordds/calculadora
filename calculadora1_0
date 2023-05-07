@@ -1,0 +1,28 @@
+primeiro = '0'
+segundo = '0'
+operador = '0'
+sair = '0'
+
+print('Bem vindo ao primeiro progama do Tiago Rodrigues')
+print('Essa calculadora faz todas as operações basicas')
+print('Use somente numeros inteiros, e os seguintes operadores')
+print(' +  -  %  *  ')
+
+while True:
+    primeiro = int(input('Digite um número inteiro: '))
+    operador = input('Digite o operador: ')
+    segundo = int(input('Digite outro número inteiro: '))
+
+    if '+' in operador:
+        print(f'O resultado é:', primeiro + segundo)
+    elif '%'  in operador or '/' in operador:
+        print(f'O resultado é:', primeiro // segundo)
+    elif '*' in operador:
+        print(f'O resultado é:', primeiro * segundo)
+    elif '-' in operador:
+        print(f'O resultado é:', primeiro - segundo)
+    sair = input('Se deseja sair, escreva [sair]: ').lower().startswith('s')
+    if sair is True:
+        break
+
+print('Obrigado por usar a calculador do Tiago')
